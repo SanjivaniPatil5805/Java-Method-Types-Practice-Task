@@ -69,6 +69,33 @@ public class MainClass {
 		System.out.println(m.vowelOrConsonant('P'));
 		System.out.println();
 		
+		System.out.println("Second largest number = "+m.secondLargestNumber(55, 34, 45));
+		System.out.println();
+		
+		System.out.println(m.profitOrLoss(1600.00, 2000.00));
+		System.out.println();
+		
+		System.out.println(m.triangleValidity(54, 66, 60));
+		System.out.println();
+		
+		System.out.println("Bonus amount = "+m.employeeAmount(65000.00, 5));
+		System.out.println();
+		
+		m.areaCalculator();
+		System.out.println();
+		
+		m.printElectricityMenu();
+		System.out.println();
+		
+        m.displayPattern();
+        System.out.println();
+        
+        m.printFactors(12);
+        System.out.println();
+		
+		System.out.println("GCD = "+m.findGCD(12, 18));
+	    System.out.println();
+		
 	}
 	
 }

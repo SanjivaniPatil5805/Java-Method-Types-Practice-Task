@@ -347,6 +347,218 @@ public class MethodQuestions {
 		
 	}
 	 
+    //Question 22. Create a method that accepts three different integers and returns the second highest number.
+	
+	public int secondLargestNumber(int a, int b, int c) {
+		
+		if((a > b && a < c) || (a > c && a < b)) {
+			
+			return a;
+			
+		} else if((b > a && b < c) || (b > c && b < a)) {
+			
+			return b;
+			
+		} else if((c > a && c < b) || (c > b && c < a)) {
+			
+			return c;
+			
+		} else {
+			
+			return 0;
+			
+		}
+		
+	}
+	
+	//Question 23. Create a method that accepts cost price and selling price and returns "profit", "loss" or "no profit no loss".
+	
+	public String profitOrLoss(double costPrice, double sellingPrice) {
+		
+		if(costPrice > sellingPrice) {
+			
+			return "Loss";
+			
+		} else if(costPrice < sellingPrice) {
+			
+			return "Profit";
+			
+		} else {
+			
+			return "No Profit No Loss";
+			
+		}
+		
+	}
+	
+	//Question 24. Create a method accepts three angles and returns whether they form a valid triangle.
+	
+	public String triangleValidity(int angle1, int angle2, int angle3) {
+		
+		int sum = angle1+angle2+angle3;
+		
+		if(sum == 180) {
+			
+			return "The angles form a valid triangle.";
+			
+		} else {
+			
+			return "The angles not form a valid triangle.";
+			
+		}
+		
+	}
+	
+	//Question 25. Create a method that accepts an employee's salary and years of service. If service is at least 5 years , calculate a 10% bonus; otherwise, calculate a 5% bonus. Return the bonus amount.
+	
+	public double employeeAmount(double salary, int years) {
+		
+		if(years >= 5) {
+			
+			 double bonus = salary * 0.10;
+			 return bonus;
+			
+		} else {
+			
+			double bonus = salary * 0.05;
+			return bonus;
+			
+		}
+		
+	}
+	
+	//Question 26. Create a method without parameters that displays a menu using switch and calculates the area of a square, rectangle, or triangle.
+	
+	public void areaCalculator() {
+	    int choice = 2;
 
+	    double side = 5;
+	    double length = 10;
+	    double width = 4;
+	    double base = 8;
+	    double height = 6;
+
+	    switch (choice) {
+	        case 1:
+	            System.out.println("Area of Square = " + (side * side));
+	            break;
+
+	        case 2:
+	            System.out.println("Area of Rectangle = " + (length * width));
+	            break;
+
+	        case 3:
+	            System.out.println("Area of Triangle = " + (0.5 * base * height));
+	            break;
+
+	        default:
+	            System.out.println("Invalid choice");
+	    }
+	}
+	
+	//Question 27. Create a method printElectricityMenu() with no parameters and no return value that displays a menu using switch. 1.Calculate bill for 100 units at ₹5 per units 2.Calculate bill for 200 units at ₹7 per units 3.Calculate bill for 300 units at ₹10 per unit 4.Invalid choice
+	
+	public void printElectricityMenu() {
+		
+		int choice = 2;
+		int billAmt;
+		
+		switch(choice) {
+		
+		case 1:
+			billAmt = 100 * 5;
+		    System.out.println("Bill Amount = "+billAmt);
+		    break;
+		    
+		case 2:
+			billAmt = 200 * 7;
+			System.out.println("Bill Amount = "+billAmt);
+			break;
+			
+		case 3:
+			billAmt = 300 * 10;
+			System.out.println("Bill Amount = "+billAmt);
+			break;
+			
+		default:
+			
+			System.out.println("Invalid Choice");
+		
+		}
+		
+	}
+	
+	//Question28. Create a method displayPattern() that prints the following pattern.
+	// *
+	// **
+	// ***
+	// ****
+	// *****
+	
+	public void displayPattern() {
+		
+		for(int i = 1; i <= 5; i++) {
+			
+			for(int j = 1; j <= i; j++) {
+				
+				System.out.print("*");
+				
+			}
+			
+			System.out.println();
+			
+		}
+		
+	}
+	
+	//Question29. Create a method printFactors(int n) that prints all factors of a given number.
+	
+	public void printFactors(int n) {
+		
+		System.out.println("Factors of "+ n +" are : ");
+		
+		for(int i = 1; i <= n; i++) {
+			
+			if(n % i == 0) {
+				
+				System.out.print(i+" ");
+				
+			}
+			
+		}
+		
+		System.out.println();	
+	}
+	
+	//Question30. Create a method findGCD(int a, int b) that returns the greatest common divisor of two numbers.
+	
+	public int findGCD(int a, int b) {
+		
+		int gcd = 1;
+		int n;
+		
+		if(a < b) {
+			
+	          n = a;
+			
+		} else {
+			
+			n = b;
+			
+		} 
+		
+		for(int i = 1; i <= n; i++ ) {
+			
+			if(a % i == 0 && b % i == 0) {
+				
+				gcd = i;
+				
+			}
+			
+		}
+		
+		return gcd;
+		
+	}
 	
 }
